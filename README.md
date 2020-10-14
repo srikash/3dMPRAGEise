@@ -1,4 +1,4 @@
-# 3dMPRAGEise/ize
+# 3dMPRAGEise (ize)
 
 Quick MP2RAGE UNI background cleaning script using only **AFNI**. 
 
