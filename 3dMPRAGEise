@@ -76,9 +76,12 @@ while getopts "h:i:r:u:" OPT; do
     esac
 done
 
-if [ -z "$re_bias" ]; then
+
+if [ ! -z "$re_bias" ]; then
     
     echo "++ UNI will ${bold} NOT ${normal} be bias-corrected."
+
+    re_bias=1
     
 else
     
@@ -98,7 +101,7 @@ else
 fi
 
 # Check if bias field should be removed or not
-if [  "$re_bias" = 0 ]; then
+if [  -z $re_bias ]; then
     
     echo "++ Removing bias-field."
     

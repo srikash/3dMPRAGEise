@@ -76,9 +76,12 @@ while getopts "h:i:r:u:" OPT; do
     esac
 done
 
-if [ -z "$re_bias" ]; then
+
+if [ ! -z "$re_bias" ]; then
     
     echo "++ UNI will ${bold} NOT ${normal} be bias-corrected."
+
+    re_bias=1
     
 else
     
