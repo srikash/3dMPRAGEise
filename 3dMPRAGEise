@@ -101,7 +101,7 @@ else
 fi
 
 # Check if bias field should be removed or not
-if [ "$re_bias" = 0 ]]; then
+if [ "$re_bias" = 0 ]; then
     
     echo "++ Removing bias-field."
     
