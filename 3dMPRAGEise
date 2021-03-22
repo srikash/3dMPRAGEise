@@ -27,7 +27,7 @@ Input arguments:
 
     -u: MP2RAGE UNI image ( e.g. /path/to/source/uni.nii.gz )
 
-    -r: Reintroduce bias-field ( default = 0 )
+    -r: Reintroduce bias-field ( default = 0 . optional)
 
 --------------------------------------------------------------------------------
 
@@ -78,15 +78,15 @@ done
 
 
 if [ ! -z "$re_bias" ]; then
-    
+    echo ""
     echo "++ UNI will ${bold} NOT ${normal} be bias-corrected."
-
+    echo ""
     re_bias=1
     
 else
-    
+    echo ""
     echo "++ UNI will be bias-corrected."
-    
+    echo ""
     re_bias=0
     
 fi
@@ -102,9 +102,9 @@ fi
 
 # Check if bias field should be removed or not
 if [ "$re_bias" = 0 ]; then
-    
+    echo ""
     echo "++ Removing bias-field."
-    
+    echo ""
     # Unifize INV2
     3dUnifize \
     -quiet \
@@ -113,9 +113,9 @@ if [ "$re_bias" = 0 ]; then
     $inv2_image
     
 else
-    
+    echo ""
     echo "++ Reintroducing bias-field."
-    
+    echo ""
     3dcopy $inv2_image ${inv2_basename}_bfc.nii
     
 fi
@@ -129,9 +129,9 @@ int_min=$(3dinfo -dminus $inv2_image)
 -a ${inv2_basename}_bfc.nii \
 -expr "( a - $int_min ) / ( $int_max - $int_min )" \
 -prefix ${inv2_basename}_intnorm.nii
-
+echo ""
 echo "++ MPRAGEising the UNI image."
-
+echo ""
 # Multiply intensity normalised INV2 to UNI image
 3dcalc \
 -overwrite \
@@ -142,6 +142,6 @@ echo "++ MPRAGEising the UNI image."
 
 # Remove intermediate files
 rm ${inv2_basename}_bfc.nii ${inv2_basename}_intnorm.nii
-
+echo ""
 echo "++ Done."
-
+echo ""
