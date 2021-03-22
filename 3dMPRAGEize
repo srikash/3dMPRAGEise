@@ -111,12 +111,16 @@ if [ "$re_bias" = 0 ]; then
     -overwrite \
     -prefix ${inv2_basename}_bfc.nii \
     $inv2_image
+
+    out_name=${uni_basename}_unbiased_clean.nii
     
 else
     echo ""
     echo "++ Reintroducing bias-field."
     echo ""
     3dcopy $inv2_image ${inv2_basename}_bfc.nii
+
+    out_name=${uni_basename}_rebiased_clean.nii
     
 fi
 
@@ -138,7 +142,7 @@ echo ""
 -a $uni_image \
 -b ${inv2_basename}_intnorm.nii \
 -expr "a * b" \
--prefix ${uni_basename}_unbiased_clean.nii
+-prefix $out_name
 
 # Remove intermediate files
 rm ${inv2_basename}_bfc.nii ${inv2_basename}_intnorm.nii
