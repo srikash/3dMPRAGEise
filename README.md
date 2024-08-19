@@ -1,4 +1,4 @@
-# 3dMPRAGEise [![DOI](https://zenodo.org/badge/304074221.svg)](https://zenodo.org/badge/latestdoi/304074221)
+# 3dMPRAGEise [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.304074221.svg)](https://zenodo.org/badge/latestdoi/304074221)
 
 Quick MP2RAGE UNI background cleaning script using pure **AFNI** prowess! 
 Now includes option to re-introduce the bias-field to the UNI image after background cleaning if you need that for whatever reason.
