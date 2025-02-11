@@ -48,7 +48,7 @@ def parse_arguments():
         f"{italic_start}Nota bene:{italic_end}\n"
         f"   {italic_start}1. The default output is set to the directory of the INV2 image.{italic_end}\n"
         f"   {italic_start}2. If you're unsure why one would need the re_bias option, you probably don't need it.{italic_end}\n"
-        f"   {italic_start}3. Do not use this script for the MP2RAGE T1map.{italic_end}\n"
+        f"   {italic_start}3. Do not use this script for the MP2RAGE T1 map.{italic_end}\n"
     )
     parser = argparse.ArgumentParser(
         description=(
