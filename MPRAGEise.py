@@ -12,7 +12,7 @@ Examples:
     MPRAGEise.py -i /path/to/data/inv2.nii.gz -u /data/uni.nii.gz
     MPRAGEise.py -i /path/to/data/inv2+orig -u /path/to/data/uni+orig -r 1
 
-Created by: Sriranga Kashyap (06-2020), srikashmri@gmail.com
+Created by: Sriranga Kashyap (01-2025), srikashmri@gmail.com
 """
 
 import os
