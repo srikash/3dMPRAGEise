@@ -1,4 +1,4 @@
-# MPRAGEise.py [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14926753.svg)](https://zenodo.org/badge/latestdoi/14926753)
+# MPRAGEise [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14926753.svg)](https://zenodo.org/badge/latestdoi/14926753)
 
 Background denoise MP2RAGE UNI images (MPRAGEising) whilst either removing or reintroducing the bias field - Powered by **AFNI**
 
